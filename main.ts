@@ -1,29 +1,30 @@
 export {}
-// Enum Data type
- enum Color {red, green , blue};
-
- let c:Color = Color.blue;
- console.log(c);
-
-//  If you are not sure about data type then we can use any
- let randomValue: any = 10;
-
- randomValue = 'Name String';
-// We can access any property if the data type is any
- console.log(randomValue.toUpperCase());
 
 
- let myVariable:unknown = 10;
+// Simple Function
 
- (myVariable as string).toUpperCase();
-
-// Multi Type Variable
-
-let MultiTypeVariable :number | boolean;
-
-MultiTypeVariable = 20;
-MultiTypeVariable = true;
+// function add(num1:number , num2:number) {
+//     return num1 + num2;
+// }
 
 
+// Making Paramters Optional by adding ?
+// function add(num1:number , num2?:number) {
+//     if(num2){
+//         return num1 + num2;
+//     }
+//     return num1;
+// }
 
+// Setting default paramters and making it optional
 
+// Making Paramters Optional by adding ?
+function add(num1:number , num2:number = 10):number {
+    if(num2){
+        return num1 + num2;
+    }
+    return num1;
+}
+
+let sum = add(10);
+console.log(sum);

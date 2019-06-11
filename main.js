@@ -1,23 +1,24 @@
 "use strict";
 exports.__esModule = true;
-// Enum Data type
-var Color;
-(function (Color) {
-    Color[Color["red"] = 0] = "red";
-    Color[Color["green"] = 1] = "green";
-    Color[Color["blue"] = 2] = "blue";
-})(Color || (Color = {}));
-;
-var c = Color.blue;
-console.log(c);
-//  If you are not sure about data type then we can use any
-var randomValue = 10;
-randomValue = 'Name String';
-// We can access any property if the data type is any
-console.log(randomValue.toUpperCase());
-var myVariable = 10;
-myVariable.toUpperCase();
-// Multi Type Variable
-var MultiTypeVariable;
-MultiTypeVariable = 20;
-MultiTypeVariable = true;
+// Simple Function
+// function add(num1:number , num2:number) {
+//     return num1 + num2;
+// }
+// Making Paramters Optional by adding ?
+// function add(num1:number , num2?:number) {
+//     if(num2){
+//         return num1 + num2;
+//     }
+//     return num1;
+// }
+// Setting default paramters and making it optional
+// Making Paramters Optional by adding ?
+function add(num1, num2) {
+    if (num2 === void 0) { num2 = 10; }
+    if (num2) {
+        return num1 + num2;
+    }
+    return num1;
+}
+var sum = add(10);
+console.log(sum);
