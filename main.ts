@@ -1,57 +1,29 @@
 export {}
-let message = 'Hello World back';
+// Enum Data type
+ enum Color {red, green , blue};
 
-console.log(message);
+ let c:Color = Color.blue;
+ console.log(c);
 
-// Variable Declaration
+//  If you are not sure about data type then we can use any
+ let randomValue: any = 10;
 
-// Const variable value once assigned cannot be changed.
-const title = 'My First Lesson';
+ randomValue = 'Name String';
+// We can access any property if the data type is any
+ console.log(randomValue.toUpperCase());
 
-// With Let keyword the variable remains open for changes
-// But cannot be redeclared .
 
-let author = 'Arif';
+ let myVariable:unknown = 10;
 
-console.log(title + 'By  '+ author);
+ (myVariable as string).toUpperCase();
 
-author = 'Shah Sahab';
-console.log(title + 'By  '+ author);
+// Multi Type Variable
 
-// Assigning Data Types
-//  let isBeginner = true;
-let isBeginner:boolean = true;
-let total: number = 0;
-let name: string = 'Arif Shah';
+let MultiTypeVariable :number | boolean;
 
-let senntence : string = `My name is  ${name}
-and I am a Beginner in Typescript`;
-
-console.log(senntence);
-
-// Defining null type of variable
-
-// Sub types
-let n:null = null;
-let u: undefined = undefined;
-let myname: string = null;
+MultiTypeVariable = 20;
+MultiTypeVariable = true;
 
 
 
-// Array and Lists
 
-// One way
-let list : number[] = [1,2,3];
-
-// Another way
-let list2:Array<number> = [4,5,6];
-
-// console.log(list);
-console.log(list[0]);
-
-// If we want want to store both number and string
-// We can use
-// The value have to be same as well as the order in which we are pasing values;
-// First string then number ,Inshort same order in which we declar it.
-
-let person1: [string , number] = ['Arif Shah',22];
