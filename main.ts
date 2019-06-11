@@ -28,3 +28,23 @@ function add(num1:number , num2:number = 10):number {
 
 let sum = add(10);
 console.log(sum);
+// Normal Function
+// function fullname(person:{firstName:string, lastName:string}){
+//     console.log(`${person.firstName}  ${person.lastName}`); 
+// }
+
+let p ={
+    firstName:'Arif',
+    lastName:'Shah'
+};
+fullname(p);
+
+// Making use of Interface
+interface Person {
+    firstName: string,
+    lastName: string
+}
+
+function fullname(person:Person){
+    console.log(`${person.firstName}  ${person.lastName}`); 
+}

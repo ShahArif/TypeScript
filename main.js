@@ -22,3 +22,15 @@ function add(num1, num2) {
 }
 var sum = add(10);
 console.log(sum);
+// Normal Function
+// function fullname(person:{firstName:string, lastName:string}){
+//     console.log(`${person.firstName}  ${person.lastName}`); 
+// }
+var p = {
+    firstName: 'Arif',
+    lastName: 'Shah'
+};
+fullname(p);
+function fullname(person) {
+    console.log(person.firstName + "  " + person.lastName);
+}
